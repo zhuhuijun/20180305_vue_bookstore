@@ -22,5 +22,5 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 ```
 1. vue init webpack book-store
 2. cnpm install 
-3. cnpm install bootstrap vue-resource --S
+3. cnpm install bootstrap@3 vue-resource --S
 ```
