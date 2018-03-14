@@ -6,7 +6,7 @@
           书名:{{book.bookName}}
         </div>
         <div class="panel-body text-center">
-          <img :src="book.bookCorver" alt="">
+          <img :src="book.bookCover" alt="">
         </div>
         <div class="panel-footer">
           价格:{{book.bookPrice | currency('￥')}}
@@ -32,6 +32,12 @@ export default {
           {bookName:'小说',bookPrice:9.8,bookCorver:'https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1520296340&di=470f5be3538d4a3de4f341f7779839c3&src=http://image.tianjimedia.com/uploadImages/2015/141/04/ONI33C1MK0O5.jpg',id:4},
         ]
       }
+  },
+  created(){
+    //配置代理表
+    this.$http.get('/book').then((res)=>{
+     this.books =res.body;
+    })
   },
   components:{},
   methods:{}
