@@ -63,7 +63,7 @@ export default {
     update() {
       console.info(this.book);
       this.$http.put("/book?id=" + this.bookId, this.book).then(() => {
-        this.changeFlag();
+        changeFlag();
       });
     }
   }
